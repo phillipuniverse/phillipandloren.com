@@ -48,3 +48,9 @@
 
 @include motion-ui-transitions;
 @include motion-ui-animations;
+
+.header {
+  background: url('/assets/img/rubin.jpg') no-repeat top center fixed;
+  background-size: cover;
+  height: 400px;
+}

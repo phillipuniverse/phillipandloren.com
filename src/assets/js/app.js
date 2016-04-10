@@ -1,5 +1,17 @@
 $(document).foundation();
 
+$('img.thumbnail').hover(function() {
+  var src = this.src;
+  if (src.indexOf('_silly') == -1) {
+    // Attach the silly in-between the image URL and the file extension
+    // e.g. /img/tay.jpg -> /img/tay_silly.jpg
+    this.src = src.substr(0, src.lastIndexOf('.')) + '_silly' + src.substr(src.lastIndexOf('.'));
+  } else {
+    // remove the _silly
+    this.src = src.replace('_silly', '');
+  }
+});
+
 var map;
 var center;
 function initMap() {
